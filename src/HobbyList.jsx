@@ -15,7 +15,8 @@ function HobbyList() {
     fetch(`http://localhost:3000/hobbies/${hobbyToDelete.id}`, {
       method: "DELETE",
     })
-      .then((response) => response.json())      .then((data) => {
+      .then((response) => response.json())   
+      .then((data) => {
         console.log(data);
         setHobbies(hobbies.filter((hobby) => hobby.id !== hobbyToDelete.id));
       });
